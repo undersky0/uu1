@@ -1,0 +1,6 @@
+<%= raw  t('notification.join.one' , 
+           :sender => link_to(truncate_name(activity.sender.name),        polymorphic_url(activity.sender.subject)),
+                      :thing => I18n.t(activity.direct_object.class.to_s.underscore+'.one'),
+                      :title => title_of(activity.direct_object)) %>
+
+<%= raw t('notification.look', :sender => truncate_name(activity.sender.name))%>: <%=polymorphic_url(activity.sender.subject)%>

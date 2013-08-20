@@ -1,0 +1,45 @@
+<section id="toolbar" class="toolbar-profile">
+  <div class="user">
+    <%= render partial: 'toolbar/logo',
+               locals: { subject: subject } %>
+
+    <% if current_subject.present? && subject != current_subject %>
+    <div class="contact-button">
+      <%= contact_button subject %>
+    </div>
+    <% end %>
+
+  </div>
+
+  <nav class="toolbar_menu">
+    <ul class="nav">
+    <li>
+      <%= link_to [ subject, :profile ] do  %>
+        <i class='icon_tool16-info'></i> <%= t 'menu.information' %>
+      <% end %>
+    </li>
+
+    <% if SocialStream.repository_models.present? %>
+      <li>
+        <%= link_to [ subject, :repository ] do %>
+          <i class='icon_navbar-resources'></i> <%= t 'repository.title' %>
+        <% end %>
+      </li>
+    <% end %>
+
+    <% if subject != current_subject %>
+      <li>
+        <%= link_to new_message_path(receiver: subject.slug) do %>
+          <i class='icon_navbar-message'></i> <%= t 'mailboxer.send' %>
+        <% end %>
+      </li>
+    <% end %>
+
+    <div class="base_items"/>
+    </ul>
+  </nav>
+
+  <%= render partial: 'toolbar/contacts', locals: { subject: subject } %>
+
+  <%= render partial: 'toolbar/groups', locals: { subject: subject } %>
+</section>

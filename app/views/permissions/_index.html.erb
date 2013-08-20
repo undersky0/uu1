@@ -1,0 +1,18 @@
+<section class="permissions">
+  <h4>
+    <%= raw t('permission.of_relation.choose', :name => h(@relation.name)) %>
+  </h4>
+
+  <% if can? :update, @relation %>
+
+    <%= form_for @relation, url: polymorphic_path(@relation, section: 'permissions'), remote: true do |f| %>
+      <%= hidden_field_tag 'relation_custom[permission_ids][]', "" %>
+
+      <%= render partial: 'permissions/list',
+                 locals: { relation: @relation } %>
+    <% end %>
+  <% else %>
+    <%= render partial: 'permissions/list',
+               locals: { relation: @relation } %>
+  <% end %>
+</section>

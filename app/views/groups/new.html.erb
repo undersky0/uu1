@@ -1,0 +1,13 @@
+<section id="new_group">
+  <% content_for :title do%>
+    <%= t('group.new.action')%>
+  <%end%>
+
+  <%= render partial: 'toolbar/home' %>
+
+  <h2><%= t('group.new.title') %></h2>
+
+  <%= render partial: 'form',
+             object: @group,
+             as: :group %>
+</section>

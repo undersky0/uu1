@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>uu1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.python.pydev.PyDevBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.radrails.rails.core.railsnature</nature>
+		<nature>com.aptana.ruby.core.rubynature</nature>
+		<nature>org.python.pydev.pythonNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>app/assets/stylesheets/social_stream/base</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/social_stream-base-2.1.0/app/assets/stylesheets/social_stream/base</locationURI>
+		</link>
+		<link>
+			<name>app/assets/stylesheets/social_stream/bootstrap-rewrite</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/social_stream-base-2.1.0/app/assets/stylesheets/social_stream/bootstrap-rewrite</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

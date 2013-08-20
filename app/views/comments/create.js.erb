@@ -1,0 +1,11 @@
+<% if @comment.valid? %>
+  SocialStream.Comment.create({
+    id: <%= @comment.id %>,
+    parentActivityId: <%= @comment.post_activity.parent.id %>,
+    html: "<%= j render(@comment.post_activity) %>"
+  });
+
+  SocialStream.Timeline.create("<%= escape_javascript dom_id(@comment.post_activity) %>");
+<% else %>
+  SocialStream.Flash.error("<%= j @comment.errors.full_messages.to_sentence %>");
+<% end %>
