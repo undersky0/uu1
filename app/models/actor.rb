@@ -19,6 +19,30 @@
 #
 #
 class Actor < ActiveRecord::Base
+  
+  # gmap class
+  # act_as_gmappable, :process_geocoding => false
+#   
+  # def change
+    # create_table :cities do |t|
+      # t.string :name
+      # t.string :state
+      # t.float :latitude
+      # t.float :longitude
+      # t.boloan :gmaps
+      # t.intteger :population
+      # t.timestamps
+    # end
+  # end
+  
+  # City.create(name: "New york" ,state: "NY", population: 8175133)
+  # City.create(name: "Los Angeles",state: "CA", population: 3792621 )
+  # def gnaos4rails_address
+    # "#{name}, #{state}"
+  # end
+  
+  
+  
   # Actor is a supertype of all subjects defined in SocialStream.subjects
   supertype_of :subject
 

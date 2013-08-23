@@ -10,6 +10,8 @@ gem 'social_stream'
 
 gem 'sqlite3'
 gem 'gmaps4rails'
+gem 'capistrano', '~> 2.15'
+gem 'capistrano-rails', '~> 0.0.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,7 +24,9 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+group :development do
+  gem 'capistrano-rails', '~> 0.0.7'
+end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
